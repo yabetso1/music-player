@@ -14,9 +14,9 @@ BOT_TOKEN = "YOUR_BOT_TOKEN"
 # Initialize the Pyrogram client
 app = Client(
     "music_bot",
-    api_id=38587651,
-    api_hash=d054a6ae5ae2a1ad8244785717721644,
-    bot_token=9250047337:AAENjgzbYlqlcm8LvaiDsSQuJH3we5sdq5E
+    api_id="38587651",
+    api_hash="d054a6ae5ae2a1ad8244785717721644",
+    bot_token="9250047337:AAENjgzbYlqlcm8LvaiDsSQuJH3we5sdq5E"
 )
 
 # Initialize PyTgCalls
