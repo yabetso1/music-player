@@ -1,4 +1,3 @@
-pyrogram==2.0.106
-py-tgcalls==1.1.3
+tobigram[call]
 yt-dlp
 tgcrypto
