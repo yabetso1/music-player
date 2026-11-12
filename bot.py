@@ -15,9 +15,9 @@ app = Client("music_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 call_py = PyTgCalls(app)
 
 def get_audio_url(query):
-    # If the user typed a name instead of a link, tell yt-dlp to search for it
+    # Tell yt-dlp to search SoundCloud instead of YouTube
     if not query.startswith("http"):
-        query = f"ytsearch:{query}"
+        query = f"scsearch:{query}"
         
     ydl_opts = {
         'format': 'bestaudio/best',
@@ -27,7 +27,7 @@ def get_audio_url(query):
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(query, download=False)
-        if 'entries' in info:  # Grab the first video from search results
+        if 'entries' in info:  # Grab the first track from the search results
             info = info['entries'][0]
         return info['url']
 
